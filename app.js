@@ -30,6 +30,6 @@ unirest.get("https://community-open-weather-map.p.rapidapi.com/forecast")
         res.render('index', {data:result.body});
   });
 })
-app.listen(8081, function(){
+app.listen(process.env.PORT || 8081, function(){
   console.log('Server running at https://127.0.0.1:8081/');
 })
