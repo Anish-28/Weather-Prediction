@@ -31,5 +31,5 @@ unirest.get("https://community-open-weather-map.p.rapidapi.com/forecast")
   });
 })
 app.listen(process.env.PORT || 8081, function(){
-  console.log('Server running at https://127.0.0.1:8081/');
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 })
