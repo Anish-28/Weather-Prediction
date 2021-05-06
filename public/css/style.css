@@ -2,16 +2,32 @@ html,
 body {
   height: 100%;
 }
+
 body {
     margin: 0;
   background: linear-gradient(to right bottom, #49a09d, #0d0c3d);
   background-repeat: no-repeat;
   background-attachment: fixed;
-    font-family: sans-serif;
-    font-weight: 100;
 }
+
+.upper {
+  color: #49a09d;
+  font-family: 'Raleway',sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 30px;
+  margin: 0 0 24px;
+  text-align: center;
+  background: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+}
+
 .container {
   position: absolute;
+  font-family: sans-seri;
+  font-weight: 100;
   width: 100%;
     top: 10%;
     left: 0%;
@@ -33,6 +49,9 @@ th {
 }
 thead th {
     background-color: #55608f;
+    color: 	#fff;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: normal;
 }
 tbody tr:hover {
       background-color: rgba(255,255,255,0.3);

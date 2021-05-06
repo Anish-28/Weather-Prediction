@@ -3,11 +3,13 @@
   <head>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
       <meta charset="utf-8">
-      <title>OpenWeatherMap</title>
+      <title>Details</title>
   </head>
   <body>
       <% if(data !== null){ %>
-          <h4>A forecast for <%=data.city.name%>, <%=data.city.country%>:</h4>
+        <div class="upper">
+          <h3>Showing weather details for <%=data.city.name%>, <%=data.city.country%>:</h3>
+        </div>
           <div class="container">
               <table>
                   <thead>
