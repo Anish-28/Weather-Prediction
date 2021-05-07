@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Details</title>
-  </head>
-  <body>
-      <% if(data !== null){ %>
-        <div class="upper">
-          <h3>Showing weather details for <u><%=data.city.name%>, <%=data.city.country%></u>:</h3>
-        </div>
-          <div class="container">
-              <table>
-                  <thead>
-                      <tr>
-                          <th>Datetime</th>
-                          <th>Temperature</th>
-                          <th>Humidity</th>
-                          <th>Pressure</th>
-                          <th>Clouds</th>
-                          <th>Wind speed</th>
-                          <th>Wind degree</th>
-                          <th>Weather</th>
-                          <th>Description</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <% for (var i = 0; i < data.cnt; i++) {%>
-                          <tr>
-                              <td><%=data.list[i].dt_txt%></td>
-                              <td><%=data.list[i].main.temp%>&#176</td>
-                              <td><%=data.list[i].main.humidity%>%</td>
-                              <td><%=data.list[i].main.pressure%> atm</td>
-                              <td><%=data.list[i].clouds.all%> %</td>
-                              <td><%=data.list[i].wind.speed%> m/s</td>
-                              <td><%=data.list[i].wind.deg%>&#176</td>
-                              <td><%=data.list[i].weather[0].main%></td>
-                              <td><%=data.list[i].weather[0].description%></td>
-                          </tr>
-                      <% } %>
-                  </tbody>
-              </table>
-          </div>
-      <% } %>
-  </body>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, , shrink-to-fit=no">
+  <title>Details</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <% if(data !== null){ %>
+  <h2>Showing weather details for <u><%=data.city.name%>, <%=data.city.country%></u>:</h2>
+  <div class="tabular-part">
+    <table>
+      <thead>
+        <tr>
+          <th>Date Time</th>
+          <th>Temperature</th>
+          <th>Pressure</th>
+          <th>Humidity</th>
+          <th>Wind speed</th>
+          <th>Wind degree</th>
+          <th>Clouds</th>
+          <th>Weather</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i < data.cnt; i++) {%>
+        <tr>
+          <td><%=data.list[i].dt_txt%></td>
+          <td><%=data.list[i].main.temp%>&#176</td>
+          <td><%=data.list[i].main.pressure%> atm</td>
+          <td><%=data.list[i].main.humidity%>%</td>
+          <td><%=data.list[i].wind.speed%> m/s</td>
+          <td><%=data.list[i].wind.deg%>&#176</td>
+          <td><%=data.list[i].clouds.all%> %</td>
+          <td><%=data.list[i].weather[0].main%></td>
+          <td><%=data.list[i].weather[0].description%></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+  <% } %>
+</body>
+
 </html>
